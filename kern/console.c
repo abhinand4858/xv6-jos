@@ -346,6 +346,7 @@ kbd_proc_data(void)
 	shift |= shiftcode[data];
 	shift ^= togglecode[data];
 
+	/* charcode contains the full keyboad layout	*/
 	c = charcode[shift & (CTL | SHIFT)][data];
 	if (shift & CAPSLOCK) {
 		if ('a' <= c && c <= 'z')
